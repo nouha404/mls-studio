@@ -1,27 +1,27 @@
-<div class=" mx-auto my-5 px-4 row font-libreFranklin " >
+<div class="mx-auto my-5 px-4 font-libreFranklin">
     <h1 class="text-5xl text-center font-bold text-[#1A4168] pt-8">Notre équipe</h1>
-
-    <div class="grid grid-cols-1 pt-5 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div *ngFor="let member of members" 
-             class="relative w-[full] sm:w-[350px] lg:w-[400px] h-[300px] bg-auto bg-no-repeat bg-center p-6 rounded-lg shadow-lg mx-auto text-center" 
-             [ngStyle]="{ 'background-image': 'url(' + member.imageUrl + ')', 'background-size': 'contain' ,'background-position': 'center' }">
-
-            <div class="d-flex absolute bottom-0 left-0 right-0 bg-white bg-opacity-80 p-4 rounded-b-lg">
-                <div class=" col-8 text-left">
-                    <h3 class="text-xl font-semibold text-[#1A4168]">{{ member.name }}</h3>
-                    <p class="text-gray-600 mb-2">{{ member.role }}</p>
-                </div>
-                
-                <div class="flex justify-end space-x-2 col ">
-                    <a href="">
-                        <mat-icon svgIcon="Email" style="width: 24px; height: 24px;"></mat-icon>
-                    </a>
-                    <a href="">
-                        <mat-icon svgIcon="Phone" style="width: 24px; height: 24px;"></mat-icon>
-                    </a>
-                </div>
-            </div>
+  
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-5">
+      <div *ngFor="let member of members" 
+           class="relative w-full sm:max-w-[300px] lg:max-w-[350px] h-[300px] bg-auto bg-no-repeat bg-center p-6 rounded-lg shadow-lg mx-auto text-center"
+           [ngStyle]="{ 'background-image': 'url(' + member.imageUrl + ')', 'background-size': 'cover', 'background-position': 'center' }">
+  
+        <div class="absolute bottom-0 left-0 right-0 bg-white bg-opacity-80 p-4 rounded-b-lg">
+          <div class="text-left">
+            <h3 class="text-xl font-semibold text-[#1A4168]">{{ member.name }}</h3>
+            <p class="text-gray-600 mb-2">{{ member.role }}</p>
+          </div>
+  
+          <div class="flex justify-end space-x-2">
+            <a href="">
+              <mat-icon svgIcon="Email" style="width: 24px; height: 24px;"></mat-icon>
+            </a>
+            <a href="">
+              <mat-icon svgIcon="Phone" style="width: 24px; height: 24px;"></mat-icon>
+            </a>
+          </div>
         </div>
+      </div>
     </div>
 
     <div class="mt-[150px] w-50 border-b border-black mx-auto"></div>

@@ -1,0 +1,50 @@
+<div class=" mx-auto my-5 px-4 row font-libreFranklin " >
+    <h1 class="text-5xl text-center font-bold text-[#1A4168] pt-8">Notre équipe</h1>
+
+    <div class="grid grid-cols-1 pt-5 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div *ngFor="let member of members" 
+             class="relative w-[full] sm:w-[350px] lg:w-[400px] h-[300px] bg-auto bg-no-repeat bg-center p-6 rounded-lg shadow-lg mx-auto text-center" 
+             [ngStyle]="{ 'background-image': 'url(' + member.imageUrl + ')', 'background-size': 'contain' ,'background-position': 'center' }">
+
+            <div class="d-flex absolute bottom-0 left-0 right-0 bg-white bg-opacity-80 p-4 rounded-b-lg">
+                <div class=" col-8 text-left">
+                    <h3 class="text-xl font-semibold text-[#1A4168]">{{ member.name }}</h3>
+                    <p class="text-gray-600 mb-2">{{ member.role }}</p>
+                </div>
+                
+                <div class="flex justify-end space-x-2 col ">
+                    <a href="">
+                        <mat-icon svgIcon="Email" style="width: 24px; height: 24px;"></mat-icon>
+                    </a>
+                    <a href="">
+                        <mat-icon svgIcon="Phone" style="width: 24px; height: 24px;"></mat-icon>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-[150px] w-50 border-b border-black mx-auto"></div>
+
+    <div class="container mx-auto p-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
+          <!-- Colonne pour l'image -->
+          <div class="flex justify-center  md:justify-start border-2">
+            <img [src]="markUrl" alt="Marc Louis" class="h-[400px] object-cover mb-4">
+          </div>
+          
+          <!-- Colonne pour le texte -->
+          <div class="border border-red-900 flex flex-col justify-between p-4">
+            <h2 class="text-5xl font-bold text-[#1A4168]">MARC LOUIS</h2>
+            <div>
+              <p class="text-gray-700 text-base">
+                "Je suis Marc Louis, fondateur de ML Studio. Depuis la création de l’entreprise, mon approche a toujours été d’établir une relation de proximité avec mes clients pour bien comprendre leurs attentes et leurs besoins spécifiques. J’accorde une grande importance à chaque détail pour m’assurer que les solutions que nous proposons soient parfaitement adaptées et innovantes."
+              </p>
+              <p class="text-gray-700 text-base mt-4">
+                "J’ai également été très sélectif dans le choix de mon équipe. Chaque membre est un expert dans son domaine, que ce soit le design, le développement web ou la communication digitale. Ensemble, nous partageons une vision commune : fournir des résultats qui non seulement répondent aux attentes, mais les surpassent, en alliant créativité et performance."
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      

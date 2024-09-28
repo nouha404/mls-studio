@@ -1,0 +1,198 @@
+<div class="container-fluide my-5">
+    <app-hero-section></app-hero-section>
+
+    <div class=" mx-auto px-4 row font-libreFranklin">
+        <h1 class="text-center mt-9 text-4xl font-bold ">Nos partenaire</h1>
+
+        <div class="row">
+            <div class="col">
+                <mat-icon svgIcon="Sncf" class="" style="width: 100px;height: 100px;"></mat-icon>
+            </div>
+            <div class="col">
+                <mat-icon svgIcon="Gustave" class="" style="width: 100px;height: 100px;"></mat-icon>
+
+            </div>
+            <div class="col">  
+                <mat-icon svgIcon="Total" class="" style="width: 100px;height: 100px;"></mat-icon>
+              
+            </div>
+            <div class="col">
+                <mat-icon svgIcon="Sorbonne" class="" style="width: 100px;height: 100px;"></mat-icon>
+
+
+            </div>
+            <div class="col">
+
+                <mat-icon svgIcon="Nike" class="" style="width: 100px;height: 100px;"></mat-icon>
+            </div>
+            <div class="col">
+                <mat-icon svgIcon="Paris" class="" style="width: 100px;height: 100px;"></mat-icon>
+
+            </div>
+        </div>
+
+        <div class="d-flex flex-col row my-5">
+            <div class="col d-flex flex-col justify-center items-center text-center bg-[#1A4168]">
+                <mat-icon svgIcon="LogoT" class="" style="width: 150px;height: 150px;"></mat-icon>
+                <p class="w-50 text-white">Fondée en 2004 par Marc Louis, ML Studio est une entreprise familiale spécialisée dans la création de sites web et la communication digitale. Avec près de 20 ans d'expérience, nous développons des solutions sur mesure, notamment pour de grandes universités. Chaque projet est unique, et nous nous engageons à maximiser la visibilité et l'impact de nos clients.</p>
+            
+                <h2 id="services" class="font-bold  text-4xl text-white" style="padding-top: 150px;">Service</h2>
+
+                <!--Les elements-->
+                <section class=" text-white p-8">
+                    <div class="container mx-auto">
+                      <div class="flex flex-col lg:flex-row items-center justify-between mb-16">
+
+                        <div class="lg:w-1/2 text-left mb-8 lg:mb-0">
+                          <h2 class="">  <mat-icon svgIcon="S" class="" style="width: 90px;height: 90px; position: relative;top:20px"></mat-icon><span class="text-3xl font-bold" style=" position: relative;right:20px">ITE WEB</span></h2>
+                          <p class="text-lg lg:text-xl mb-4 pl-5">
+                            ML Studio conçoit des sites diversifiés, des plateformes éducatives <br/> aux boutiques en ligne, en passant par des blogs et des sites événementiels. Chaque projet est réalisé sur mesure pour répondre à vos besoins spécifiques.
+                          </p>
+                        </div>
+                
+                        <div class="lg:w-1/2">
+                          <div class="relative">
+                          
+                            <div class="overflow-hidden rounded-lg shadow-lg h-64 lg:h-80" >
+                              <img  [src]="imagesSiteWeb[currentIndexSiteWeb]" alt="Image du carrousel" class="w-full h-full object-cover transition-opacity duration-500 ease-in-out">
+                            </div>
+                          </div>
+                  
+                          <div class="flex justify-center space-x-2 mt-4">
+                            <span *ngFor="let image of imagesSiteWeb; let i = index"
+                                  class="w-3 h-3 rounded-full cursor-pointer"
+                                 [ngClass]="getClassForIndicator(i, currentIndexSiteWeb)"
+                                  [ngClass]="getClassForIndicator(i, currentIndexCommunication)"
+                                  (click)="currentIndexSiteWeb = i"></span>
+                          </div>
+                        
+                        </div>
+
+
+
+
+                        </div>
+                      </div>
+                  
+                      
+                      <div class="flex flex-col lg:flex-row items-center justify-between mb-16">
+                       
+                        <div class="lg:w-1/2 mb-8 lg:mb-0">
+                          <div class="relative">
+                           
+                            <div class="overflow-hidden rounded-lg shadow-lg h-64 lg:h-80">
+                              <img [src]="imagesAmelioration[currentIndexAmelioration]" alt="Image du carrousel" class="w-full h-full object-cover transition-opacity duration-500 ease-in-out">
+                            </div>
+                          </div>
+                  
+                          <div class="flex justify-center space-x-2 mt-4">
+                            <span *ngFor="let image of imagesAmelioration; let i = index"
+                                  class="w-3 h-3 rounded-full cursor-pointer"
+                                  [ngClass]="getClassForIndicator(i, currentIndexAmelioration)"
+                                  (click)="currentIndexAmelioration = i"></span>
+                          </div>
+                       
+
+
+                        </div>
+                
+                        <div class="lg:w-1/2 text-left">
+                            <h2 class="">  <mat-icon svgIcon="A" class="" style="width: 90px;height: 90px; position: relative;top:20px"></mat-icon><span class="text-3xl font-bold" style=" position: relative;right:10px">MÉLIORATION</span></h2>
+                          
+                          <p class="text-lg lg:text-xl mb-4 pl-5">
+                            Nous optimisons les sites déjà en place pour les rendre plus esthétiques et intuitifs. Que ce soit sur le plan visuel ou fonctionnel, notre objectif est d'améliorer l'expérience utilisateur.
+                          </p>
+                        </div>
+                      </div>
+                  
+                      <div class="flex flex-col lg:flex-row items-center justify-between">
+                    
+                        <div class="lg:w-1/2 text-left mb-8 lg:mb-0">
+                            
+                            <h2 class="">  <mat-icon svgIcon="C" class="" style="width: 90px;height: 90px; position: relative;top:20px"></mat-icon><span class="text-3xl font-bold" style=" position: relative;right:20px">OMMUNICATION</span></h2>
+                          
+
+                          <p class="text-lg lg:text-xl mb-4 pl-5">
+                            Nous développons des stratégies sur mesure pour renforcer l'image de votre entreprise. En apprenant à connaître vos utilisateurs, nous créons un contenu engageant qui rapproche votre marque de votre audience.
+                          </p>
+                        </div>
+                  
+                        <!-- Carrousel à droite -->
+                        <div class="lg:w-1/2">
+                          <div class="relative">
+                            <!-- Image actuelle -->
+                            <div class="overflow-hidden rounded-lg shadow-lg h-64 lg:h-80">
+                              <img [src]="imagesCommunication[currentIndexCommunication]" alt="Image du carrousel" class="w-full h-full object-cover transition-opacity duration-500 ease-in-out">
+                            </div>
+                          </div>
+                  
+                          <div class="flex justify-center space-x-2 mt-4">
+                            <span *ngFor="let image of imagesCommunication; let i = index"
+                                  class="w-3 h-3 rounded-full cursor-pointer"
+                                  [ngClass]="getClassForIndicator(i, currentIndexCommunication)"
+                                  (click)="currentIndexCommunication = i"></span>
+                          </div>
+                        
+                        </div>
+                      </div>
+                  </section>
+                  
+                  
+            </div>
+
+            
+            
+            
+            
+        </div>
+
+        
+        <div class="row">
+            <span class="font-bold text-3xl font-libreFranklin block text-left mb-6">Votre avis nous intéresse :</span>
+            <span class="border-t-2 border-[#1A4168] relative bottom-5 left-4 w-20"></span>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="col bg-[#F1F3F9] p-6 rounded-lg shadow-lg mx-auto text-center max-w-full sm:max-w-[340px]">
+                    <div class="w-20 h-20 mx-auto mb-4">
+                        <mat-icon svgIcon="Profil" class="" style="width: 100px; height: 100px;"></mat-icon>
+                    </div>
+                    <h3 class="text-xl font-semibold text-[#1A4168]">Athena Ghandi</h3>
+                    <p class="text-gray-600 pt-2 mx-sm mb-4">
+                        Excellente collaboration avec ML Studio ! Ils ont vraiment compris nos besoins et livré un site qui dépasse nos attentes.
+                    </p>
+                    <div class="start">
+                        <mat-icon svgIcon="Start" style="width: 100px;"></mat-icon>
+                    </div>
+                </div>
+        
+                <div class="col bg-[#F1F3F9] p-6 rounded-lg shadow-lg mx-auto text-center max-w-full sm:max-w-[340px]">
+                    <div class="w-20 h-20 mx-auto mb-4">
+                        <mat-icon svgIcon="Profil" class="" style="width: 100px; height: 100px;"></mat-icon>
+                    </div>
+                    <h3 class="text-xl font-semibold text-[#1A4168]">Lola Thalles</h3>
+                    <p class="text-gray-600 pt-2 mx-sm mb-4">
+                        Excellente collaboration avec ML Studio ! Ils ont vraiment compris nos besoins et livré un site qui dépasse nos attentes.
+                    </p>
+                    <div class="start">
+                        <mat-icon svgIcon="Start" style="width: 100px;"></mat-icon>
+                    </div>
+                </div>
+        
+                <div class="col bg-[#F1F3F9] p-6 rounded-lg shadow-lg mx-auto text-center max-w-full sm:max-w-[340px]">
+                    <div class="w-20 h-20 mx-auto mb-4">
+                        <mat-icon svgIcon="Profil" class="" style="width: 100px; height: 100px;"></mat-icon>
+                    </div>
+                    <h3 class="text-xl font-semibold text-[#1A4168]">Elisabet Delta</h3>
+                    <p class="text-gray-600 pt-2 mx-sm mb-4">
+                        Excellente collaboration avec ML Studio ! Ils ont vraiment compris nos besoins et livré un site qui dépasse nos attentes.
+                    </p>
+                    <div class="start">
+                        <mat-icon svgIcon="Start" style="width: 100px;"></mat-icon>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+        
+    </div>
+</div>
